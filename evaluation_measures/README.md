@@ -3,7 +3,7 @@ Open MATLAB and move to the folder `evaluation_measures`. In the command window,
 
 ``permuteMatrix("../dissimilarity_matrices/P1/geom/run1A.matrix","./permutation.txt")``,
 
-to permute the dissimilarity matrix `run1A.matrix` according to the true classification of the test set, ``permutation.txt``, which is precomputed by the ground truth files. Here:
+to permute the dissimilarity matrix `run1A.matrix` according to the true classification of the test set; the permutation vector, ``permutation.txt``, is precomputed by the ground truth files. Moreover:
 -  P1,...,P5 are the five participants to the track.
 -  "geom" and "geomchem" identify, respectively, the folders containing the dissimilarity matrices for Tasks A (only geometry) and B (geometry and physicochemical properties).
 
