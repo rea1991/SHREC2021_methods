@@ -15,7 +15,7 @@ To compute the precision recalls, one needs to use the routine ``prerec.exe``. A
 
 ``wine prerec.exe lista-protein.txt lista-protein.txt ../../dissimilarity_matrices/P1/geom/run1A.matrixPerm.txt ./output/prerec/P1_geom_run1.txt 20``
 
-One can use the MATLAB routines ``plotPrerec_geom.m``, ``plotPrerec_geomchem.m``, ``plotBestPrerec_geom.`` and ``plotBestPrerec_geomchem.m`` to plot the precision recalls. The mAP coefficients of Table 3 are obtained via the MATLAB routine ``mainMAP.m``.
+One can use the MATLAB routines ``plotPrerec_geom.m``, ``plotPrerec_geomchem.m``, ``plotBestPrerec_geom.m`` and ``plotBestPrerec_geomchem.m`` to plot the precision recalls. The mAP coefficients of Table 3 are obtained via the MATLAB routine ``mainMAP.m``.
 
 ### ADRs (Tables 4 and 8) and NDCGs (Figures 12 and 19)
 - First, run the MATLAB routine ``main_mean_ADR_DCG.m``: it allows to get the numbers contained in Tables 4 and 8, as well as some quantities that are used to plot the NDCGs..
