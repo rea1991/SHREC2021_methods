@@ -1,6 +1,6 @@
 # SHREC 2021: Retrieval and classification of protein surfaces equipped with physical and chemical properties
 
-This repository shares the dissimilarity matrices and the routines that were used to produced the results in [1]. The dataset and the ground truths behind the benchmark can be found at
+This repository shares the dissimilarity matrices and the routines that were used to produced the results in [1]. The dataset and the ground truths behind the benchmark can be found at:
 
 https://github.com/rea1991/SHREC2021_dataset
 
