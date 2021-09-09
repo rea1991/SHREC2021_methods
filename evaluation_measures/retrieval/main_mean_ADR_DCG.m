@@ -12,7 +12,8 @@ clc; clear; close all;
 %
 % Additionally, the user should set the task type
 % ("geom" or "geomchem"), the run (1, 2 or 3; the only exception is for
-% P=5, that has a single run for the task "geomchem").
+% P=5, that has a single run for the task "geomchem" --> the code will 
+% generate an error, just ignore it).
 
 % Participant (integer from 1 to 5)
 for P=1:5
@@ -28,11 +29,11 @@ for P=1:5
     ground_truth = "GT2";
     
     if task =="geom"
-        [NCG,NDCG,ADR]=mean_ADR_DCG("../../results/P" + ...
+        [NCG,NDCG,ADR]=mean_ADR_DCG("../../dissimilarity_matrices/P" + ...
             num2str(P) + "/" + task + "/run" + num2str(run) + "A.matrixPerm.txt", ...
             './multiclass_matrix_solution_' + ground_truth + '.txt');
     else
-        [NCG,NDCG,ADR]=mean_ADR_DCG("../../results/P" + ...
+        [NCG,NDCG,ADR]=mean_ADR_DCG("../../dissimilarity_matrices/P" + ...
             num2str(P) + "/" + task + "/run" + num2str(run) + "B.matrixPerm.txt", ...
             './multiclass_matrix_solution_' + ground_truth + '.txt');
     end
