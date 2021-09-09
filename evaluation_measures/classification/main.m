@@ -4,8 +4,8 @@ clc; clear; close all;
 % This function requires two input files: 
 % *) The ground truth classification vector "ground2.txt", here precomputed
 %    from the cla file; 
-% *) A dissimilarity matrix, here pre-permuted as described in the folder 
-% "ground_truths/retrieval".
+% *) A dissimilarity matrix, here pre-permuted as described in the readme 
+%    in the folder "evaluation_measures".
 % It computes several statistics from the corresponding confusion matrix: 
 % TPR, TNR, PPV, NPV, ACC, F1.
 %
@@ -19,8 +19,9 @@ clc; clear; close all;
 % by setting ground_truth to "GT3".
 %
 % Additionally, the user should set the participant number P, the task type
-% ("geom" or "geomchem"), the run (1, 2 or 3; the only exception is for
-% P=5, that has a single run for the task "geomchem").
+% ("geom" or "geomchem"), the run (1, 2 or 3; the only exception is for P=5, 
+% that has a single run for the task "geomchem" --> the code will generate 
+% an error, just ignore it).
 
 
 % Participant (integer from 1 to 5)
@@ -44,25 +45,25 @@ ground_truth = "GT2";
 
 if coarse==1
     if ground_truth == "GT2"
-        macro_classes = load("macro_classes_GT2.txt");
+        macro_classes = load("../macro_classes_GT2.txt");
     else
-        macro_classes = load("macro_classes_GT3.txt");
+        macro_classes = load("../macro_classes_GT3.txt");
     end
 end
 
 if task=="geom"
-    [successi,classlabel]= valuta_classificazioneNN("ground2.txt",...
-        "../../results/P" + num2str(P) + "/" + task + "/run" + num2str(run) + ...
+    [successi,classlabel]= valuta_classificazioneNN("../ground2.txt",...
+        "../../dissimilarity_matrices/P" + num2str(P) + "/" + task + "/run" + num2str(run) + ...
         "A.matrixPerm.txt");
 else
-    [successi,classlabel]= valuta_classificazioneNN("ground2.txt",...
-        "../../results/P" + num2str(P) + "/" + task + "/run" + num2str(run) + ...
+    [successi,classlabel]= valuta_classificazioneNN("../ground2.txt",...
+        "../../dissimilarity_matrices/P" + num2str(P) + "/" + task + "/run" + num2str(run) + ...
         "B.matrixPerm.txt");
 end
 predicted = classlabel(:,2);
 
 %% ACTUAL
-actual = load("ground2.txt");
+actual = load("../ground2.txt");
 actual = actual(:,2);
 
 

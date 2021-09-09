@@ -1,11 +1,11 @@
 clc; clear; close all;
 
 % INPUT AND OUTPUT
-% This function requires two input files:
+% This function requires two input files: 
 % *) The ground truth classification vector "ground2.txt", here precomputed
-%    from the cla file;
-% *) A dissimilarity matrix, here pre-permuted as described in the folder
-% "ground_truths/retrieval".
+%    from the cla file; 
+% *) A dissimilarity matrix, here pre-permuted as described in the readme 
+%    in the folder "evaluation_measures".
 % It computes and plots the confusion matrices and saves them in the output
 % folder.
 %
@@ -50,16 +50,16 @@ for P=1:5
     close all;
     
     if task=="geom"
-        dissMat_Participant = "../../results/P" + ...
+        dissMat_Participant = "../../dissimilarity_matrices/P" + ...
             num2str(P) +"/"+ task + "/run" + run + "A.matrixPerm.txt";
     else
-        dissMat_Participant = "../../results/P" + ...
+        dissMat_Participant = "../../dissimilarity_matrices/P" + ...
             num2str(P) +"/"+ task + "/run" + run + "B.matrixPerm.txt";
     end
     
-    actual = load("ground2.txt");
+    actual = load("../ground2.txt");
     actual = actual(:,2);
-    [successi,classlabel]=valuta_classificazioneNN('ground2.txt', dissMat_Participant);
+    [successi,classlabel]=valuta_classificazioneNN('../ground2.txt', dissMat_Participant);
     predicted = classlabel(:,2);
     
     if coarse==1
