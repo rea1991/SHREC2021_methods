@@ -5,7 +5,7 @@ This repository shares the dissimilarity matrices and the routines that were use
 https://github.com/rea1991/SHREC2021_dataset
 
 ### Dissimilarity matrices from the SHREC participants and evaluation measures
-Five research groups registered to the track. The submitted dissimilarity matrices can be found inside the five folders in `results`. The codes that were used to compute the evaluation measures are found in the three folders inside  `ground_truths`. To compare the performance of the methods that make use of the physicochemical properties against the simple geometric models, we asked the participants to perform two tasks:
+Five research groups registered to the track. The submitted dissimilarity matrices can be found inside the five folders in `dissimilarity_matrices`. The codes that were used to compute the evaluation measures are found in the three folders inside  `evaluation_measures`. To compare the performance of the methods that make use of the physicochemical properties against the simple geometric models, we asked the participants to perform two tasks:
 - Task A: only the OFF files of the models are considered (i.e. only the geometry is considered);
 - Task B: in addition to the geometry, the participant is asked to also consider the TXT files (physicochemical matching).
 

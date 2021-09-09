@@ -1,3 +1,9 @@
+### PRE-PROCESSING THE DISSIMILARITY MATRICES
+Open MATLAB and move to the folder `evaluation_measures`. In the command window, type:
+
+``permuteMatrix("../dissimilarity_matrices/P1/geom/run1A.matrix","./permutation.txt")``,
+
+to permute the dissimilarity matrix `run1A.matrix` according to the true classification of the test set. This will produce the output file `run1A.matrixPerm.txt`. Repeat this step for all dissimilarity matrices. This is **mandatory** to the computation of any evaluation measure.
 
 ### GROUND TRUTHS
 
