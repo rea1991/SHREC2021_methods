@@ -1,5 +1,5 @@
 ### PRE-PROCESSING THE DISSIMILARITY MATRICES
-Open MATLAB and move to the folder `evaluation_measures`. In the command window, type:
+As a first step, one should decompress all folders inside `dissimilarity_matrices`. Then, open MATLAB and move to the folder `evaluation_measures`. In the command window, type:
 
 ``permuteMatrix("../dissimilarity_matrices/P1/geom/run1A.matrix","./permutation.txt")``,
 
